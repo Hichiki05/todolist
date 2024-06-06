@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+    <section id="intro">
+        <img src="images/coverimage.jpg" alt="Cover Image">
+        <h1>TaskMaster</h1>
+        <p>Organize Your Tasks Efficiently</p>
+        <a href="#todo-list" class="btn">View Project</a>
+    </section>
+    
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <img src="images/featureimage1.jpg" alt="Feature 1 Image" class="feature-image">
+            <h3>Task Creation</h3>
+            <p>Easily create tasks and manage your to-do list.</p>
+        </div>
+        <div class="feature">
+            <img src="images/featureimage2.jpg" alt="Feature 2 Image" class="feature-image">
+            <h3>Deadline Reminders</h3>
+            <p>Set deadlines and receive reminders to stay on track.</p>
+        </div>
+        <div class="feature">
+            <img src="images/featureimage3.jpg" alt="Feature 3 Image" class="feature-image">
+            <h3>Priority Settings</h3>
+            <p>Assign priorities to tasks to focus on what matters most.</p>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About TaskMaster</h2>
+        <p>This project was inspired by the need to improve personal productivity and stay organized. TaskMaster is a Portfolio Project for Holberton School.</p>
+        <h3>Developer</h3>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit">LinkedIn</a>
+                <a href="https://github.com/Hichiki05">GitHub</a>
+                <a href="https://x.com/home?lang=en">Twitter</a>
+            </li>
+        </ul>
+        <h3>Project Repository</h3>
+        <a href="github-repo-url">GitHub Repository</a>
+    </section>
+    
+    <section id="todo-list">
+        <h2>To-Do List</h2>
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

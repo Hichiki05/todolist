@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #fdf6f0; /* Warm background color */
+    background: #FAF3F0; /* Lighter pastel beige */
     color: #333; /* Darker text color for better readability */
 }
 
 header {
-    background: #f4a261; /* Warm color for header */
+    background: #F6B3A8; /* Lighter warm color for header */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -30,7 +30,7 @@ nav a {
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid #ddd;
-    background: #f8d7da; /* Warm color for slider background */
+    background: #FCE4E4; /* Lighter pastel pink for slider background */
 }
 
 .slides {
@@ -58,25 +58,25 @@ nav a {
 #intro {
     text-align: center;
     padding: 50px 0;
-    background: #ffebcd; /* Warm color for intro section */
+    background: #FFF8E1; /* Lighter pastel peach for intro section */
 }
 
 #intro h1 {
     margin-top: 20px;
     font-size: 3em;
-    color: #e07a5f; /* Warm color for title */
+    color: #F5A7A7; /* Lighter warm color for title */
 }
 
 #intro p {
     font-size: 1.2em;
-    color: #f76c6c; /* Warm color for paragraph */
+    color: #F7A8A2; /* Lighter warm color for paragraph */
 }
 
 #intro .btn {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background: #f4a261; /* Button background color */
+    background: #F6B3A8; /* Button background color */
     color: #fff;
     text-decoration: none;
     border-radius: 5px; /* Rounded corners */
@@ -85,13 +85,13 @@ nav a {
 /* Features section */
 #features {
     padding: 50px 0;
-    background: #f8d7da; /* Warm color for features section */
+    background: #FCE4E4; /* Lighter pastel pink for features section */
 }
 
 #features h2 {
     text-align: center;
     font-size: 2.5em; /* Larger title size */
-    color: #e07a5f; /* Warm color for section title */
+    color: #F5A7A7; /* Lighter warm color for section title */
 }
 
 .feature {
@@ -111,7 +111,7 @@ nav a {
 .feature h3 {
     margin-top: 10px;
     font-size: 2em; /* Increased title size */
-    color: #e07a5f; /* Warm color for feature titles */
+    color: #F5A7A7; /* Lighter warm color for feature titles */
 }
 
 .feature p {
@@ -123,13 +123,13 @@ nav a {
 /* About section */
 #about {
     padding: 50px 0;
-    background: #ffebcd; /* Warm color for about section */
+    background: #FFF8E1; /* Lighter pastel peach for about section */
 }
 
 #about h2 {
     text-align: center;
     font-size: 2.5em; /* Larger title size */
-    color: #e07a5f; /* Warm color for section title */
+    color: #F5A7A7; /* Lighter warm color for section title */
 }
 
 #about p {
@@ -143,7 +143,7 @@ nav a {
 .about-slider {
     margin: 20px auto;
     max-width: 800px;
-    background: #f8d7da; /* Warm color for about slider background */
+    background: #FCE4E4; /* Lighter pastel pink for about slider background */
 }
 
 .about-slider .slides img {
@@ -174,7 +174,7 @@ nav a {
 #todo-list {
     padding: 50px 0;
     text-align: center;
-    background: #ffebcd; /* Warm color for to-do list section */
+    background: #FFF8E1; /* Lighter pastel peach for to-do list section */
 }
 
 .input-container {
@@ -189,7 +189,7 @@ nav a {
 
 button {
     padding: 10px 20px;
-    background: #f4a261; /* Button background color */
+    background: #F6B3A8; /* Button background color */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -197,7 +197,7 @@ button {
 }
 
 button:hover {
-    background: #e07a5f; /* Darker warm color for hover effect */
+    background: #F5A7A7; /* Darker warm color for hover effect */
 }
 
 #task-list {
@@ -211,21 +211,21 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 4px;
     position: relative;
-    background-color: #ffebcd; /* Warm background for tasks */
+    background-color: #FFF8E1; /* Lighter pastel peach background for tasks */
     transition: background-color 0.3s;
 }
 
 #task-list li:nth-child(odd) {
-    background-color: #ffe4e1; /* Slightly different warm color */
+    background-color: #FCE4E4; /* Slightly different pastel pink */
 }
 
 #task-list li:nth-child(even) {
-    background-color: #fff0f5; /* Slightly different warm color */
+    background-color: #F5F5F5; /* Slightly different pastel gray */
 }
 
 .task-item.completed {
     text-decoration: line-through;
-    background-color: #d4edda; /* Light green for completed tasks */
+    background-color: #D4EDDA; /* Light pastel green for completed tasks */
 }
 
 /* Styling for 'Done' and 'Delete' buttons */
@@ -241,11 +241,11 @@ button:hover {
 }
 
 .delete-btn {
-    top: 10px;
+    top: 0; /* Moved up further from the task text */
 }
 
 .complete-btn {
-    top: 10px;
+    top: 0; /* Moved up further from the task text */
     right: 50px; /* Move away from the task text */
 }
 
@@ -258,12 +258,12 @@ button:hover {
 #features h2, #about h2 {
     text-align: center;
     font-size: 2.5em; /* Larger title size */
-    color: #e07a5f; /* Warm color for section titles */
+    color: #F5A7A7; /* Lighter warm color for section titles */
 }
 
 /* Title for Developer section */
 #about h3 {
     text-align: center;
     font-size: 2em; /* Adjust size if needed */
-    color: #e07a5f; /* Warm color for titles */
+    color: #F5A7A7; /* Lighter warm color for titles */
 }

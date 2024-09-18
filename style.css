@@ -23,16 +23,16 @@ nav a {
 .slider {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Adjust the max-width as needed */
+    max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid #ddd; /* Optional: border for visual clarity */
+    border: 1px solid #ddd;
 }
 
 .slides {
     position: relative;
     width: 100%;
-    height: 400px; /* Adjust the height as needed */
+    height: 400px;
 }
 
 .slides img {
@@ -42,11 +42,10 @@ nav a {
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.5s ease-in-out; /* Smooth transition */
-    opacity: 0; /* Hide all images initially */
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
 
-/* Ensure the first slide is visible initially */
 .slides img:first-child {
     opacity: 1;
 }
@@ -84,6 +83,15 @@ nav a {
 .feature {
     text-align: center;
     margin: 20px 0;
+    position: relative;
+}
+
+.feature-image {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid #ddd;
+    margin: 0 auto;
 }
 
 .feature h3 {
@@ -92,17 +100,9 @@ nav a {
 }
 
 .feature p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #666;
-}
-
-/* Ensure all feature images are the same size */
-.feature-image {
-    width: 300px; /* Adjust the width as needed */
-    height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+    margin-top: 10px;
 }
 
 /* About section */
@@ -121,17 +121,14 @@ nav a {
     margin: 20px auto;
 }
 
-/* About section images */
-.about-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.about-slider {
     margin: 20px auto;
+    max-width: 800px;
 }
 
-.about-images img {
-    max-width: 500px;
-    height: auto;
+.about-slider .slides img {
+    width: 100%;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -187,27 +184,41 @@ button:hover {
 
 #task-list li {
     padding: 10px;
-    background: #f4f4f4;
     margin: 10px 0;
     border: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
 }
 
-.task-item span {
-    flex-grow: 1; /* Allows the task text to take up remaining space */
+#task-list li:nth-child(odd) {
+    background-color: #eaf4f4; /* Light blue */
+}
+
+#task-list li:nth-child(even) {
+    background-color: #f4eaf4; /* Light pink */
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    background-color: #d4edda; /* Light green for completed tasks */
+}
+
+.complete-btn, .delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.complete-btn {
+    right: 80px;
 }
 
 .delete-btn {
-    margin-left: 10px; /* Add space between task text and delete button */
-}
-
-.done-btn {
-    margin-right: 10px; /* Add space between done button and task text */
-}
-
-.done {
-    text-decoration: line-through;
-    color: #999;
+    right: 10px;
 }

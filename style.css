@@ -1,13 +1,15 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif; /* More elegant font */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: #fdf6f0; /* Warm background color */
+    color: #333; /* Darker text color for better readability */
 }
 
 header {
-    background: #333;
+    background: #f4a261; /* Warm color for header */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -17,6 +19,7 @@ nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
+    font-size: 1.1em;
 }
 
 /* Slider styles */
@@ -27,6 +30,7 @@ nav a {
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid #ddd;
+    background: #f8d7da; /* Warm color for slider background */
 }
 
 .slides {
@@ -54,30 +58,34 @@ nav a {
 #intro {
     text-align: center;
     padding: 50px 0;
-    background: #f4f4f4;
+    background: #ffebcd; /* Warm color for intro section */
 }
 
 #intro h1 {
     margin-top: 20px;
     font-size: 3em;
+    color: #e07a5f; /* Warm color for title */
 }
 
 #intro p {
     font-size: 1.2em;
+    color: #f76c6c; /* Warm color for paragraph */
 }
 
 #intro .btn {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background: #333;
+    background: #f4a261; /* Button background color */
     color: #fff;
     text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
 }
 
 /* Features section */
 #features {
     padding: 50px 0;
+    background: #f8d7da; /* Warm color for features section */
 }
 
 .feature {
@@ -96,34 +104,40 @@ nav a {
 
 .feature h3 {
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 2em; /* Increased title size */
+    color: #e07a5f; /* Warm color for feature titles */
 }
 
 .feature p {
-    font-size: 1.1em;
-    color: #666;
+    font-size: 1.2em;
+    color: #333; /* Dark text for better readability */
     margin-top: 10px;
 }
 
 /* About section */
 #about {
     padding: 50px 0;
-    background: #f4f4f4;
+    background: #ffebcd; /* Warm color for about section */
 }
 
 #about h2 {
     text-align: center;
+    font-size: 2em; /* Increased title size */
+    color: #e07a5f; /* Warm color for about section title */
 }
 
 #about p {
     text-align: center;
     max-width: 600px;
     margin: 20px auto;
+    font-size: 1.2em;
+    color: #333; /* Dark text for better readability */
 }
 
 .about-slider {
     margin: 20px auto;
     max-width: 800px;
+    background: #f8d7da; /* Warm color for about slider background */
 }
 
 .about-slider .slides img {
@@ -146,13 +160,14 @@ nav a {
 
 #about ul li a {
     text-decoration: none;
-    color: #333;
+    color: #e07a5f; /* Warm color for links */
 }
 
 /* To-Do List section */
 #todo-list {
     padding: 50px 0;
     text-align: center;
+    background: #ffebcd; /* Warm color for to-do list section */
 }
 
 .input-container {
@@ -167,14 +182,15 @@ nav a {
 
 button {
     padding: 10px 20px;
-    background: #333;
+    background: #f4a261; /* Button background color */
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
 }
 
 button:hover {
-    background: #555;
+    background: #e07a5f; /* Darker warm color for hover effect */
 }
 
 #task-list {
@@ -188,16 +204,16 @@ button:hover {
     border: 1px solid #ddd;
     border-radius: 4px;
     position: relative;
-    background-color: #f4f4f4;
+    background-color: #ffebcd; /* Warm background for tasks */
     transition: background-color 0.3s;
 }
 
 #task-list li:nth-child(odd) {
-    background-color: #eaf4f4; /* Light blue */
+    background-color: #ffe4e1; /* Slightly different warm color */
 }
 
 #task-list li:nth-child(even) {
-    background-color: #f4eaf4; /* Light pink */
+    background-color: #fff0f5; /* Slightly different warm color */
 }
 
 .task-item.completed {
@@ -213,6 +229,7 @@ button:hover {
     border: none;
     cursor: pointer;
     padding: 5px;
+    border-radius: 5px; /* Rounded corners for buttons */
 }
 
 .complete-btn {

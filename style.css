@@ -36,8 +36,9 @@ nav a {
 
 .slides img {
     flex: 0 0 100%;
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
 /* Ensure the first slide is visible initially */

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,13 +13,33 @@
             <a href="#about">About</a>
         </nav>
     </header>
+
+    <!-- Slider section -->
     <section id="intro">
-        <img src="images/coverimage.jpg" alt="Cover Image">
+        <div class="slider">
+            <div class="slides">
+                <img src="images/slide-1.jpeg" alt="Slide 1">
+                <img src="images/slide-2.jpeg" alt="Slide 2">
+                <img src="images/slide-3.jpeg" alt="Slide 3">
+                <img src="images/slide-4.jpeg" alt="Slide 4">
+            </div>
+        </div>
         <h1>TaskMaster</h1>
         <p>Organize Your Tasks Efficiently</p>
         <a href="#todo-list" class="btn">View Project</a>
     </section>
-    
+
+    <!-- To-Do List Section (moved below the intro) -->
+    <section id="todo-list">
+        <h2>To-Do List</h2>
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+    </section>
+
+    <!-- Features section -->
     <section id="features">
         <h2>Features</h2>
         <div class="feature">
@@ -38,10 +58,15 @@
             <p>Assign priorities to tasks to focus on what matters most.</p>
         </div>
     </section>
-    
+
+    <!-- Updated About section with more photos -->
     <section id="about">
         <h2>About TaskMaster</h2>
         <p>This project was inspired by the need to improve personal productivity and stay organized. TaskMaster is a Portfolio Project for Holberton School.</p>
+        <div class="about-images">
+            <img src="images/slide-5.jpeg" alt="About Image 1">
+            <img src="images/slide-6.jpeg" alt="About Image 2">
+        </div>
         <h3>Developer</h3>
         <ul>
             <li>
@@ -52,15 +77,6 @@
         </ul>
         <h3>Project Repository</h3>
         <a href="https://github.com/Hichiki05/todolist">GitHub Repository</a>
-    </section>
-    
-    <section id="todo-list">
-        <h2>To-Do List</h2>
-        <div class="input-container">
-            <input type="text" id="task-input" placeholder="Add a new task...">
-            <button onclick="addTask()">Add Task</button>
-        </div>
-        <ul id="task-list"></ul>
     </section>
 
     <script src="script.js"></script>

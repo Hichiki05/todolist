@@ -6,7 +6,19 @@ function addTask() {
         const taskList = document.getElementById('task-list');
         
         const listItem = document.createElement('li');
-        listItem.textContent = taskText;
+        listItem.classList.add('task-item');
+        
+        const taskSpan = document.createElement('span');
+        taskSpan.textContent = taskText;
+        listItem.appendChild(taskSpan);
+        
+        const doneButton = document.createElement('button');
+        doneButton.textContent = 'Done';
+        doneButton.classList.add('done-btn');
+        doneButton.onclick = function() {
+            taskSpan.classList.toggle('done'); // Toggle strike-through style
+        };
+        listItem.appendChild(doneButton);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
@@ -14,8 +26,8 @@ function addTask() {
         deleteButton.onclick = function() {
             taskList.removeChild(listItem);
         };
-
         listItem.appendChild(deleteButton);
+
         taskList.appendChild(listItem);
 
         taskInput.value = "";

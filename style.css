@@ -98,8 +98,7 @@ nav a {
 
 /* Ensure all feature images are the same size */
 .feature-image {
-    width: 100%;
-    max-width: 300px;
+    width: 300px; /* Adjust the width as needed */
     height: auto;
     object-fit: cover;
     display: block;
@@ -131,7 +130,7 @@ nav a {
 }
 
 .about-images img {
-    max-width: 300px;
+    max-width: 500px;
     height: auto;
     object-fit: cover;
 }
@@ -191,4 +190,24 @@ button:hover {
     background: #f4f4f4;
     margin: 10px 0;
     border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item span {
+    flex-grow: 1; /* Allows the task text to take up remaining space */
+}
+
+.delete-btn {
+    margin-left: 10px; /* Add space between task text and delete button */
+}
+
+.done-btn {
+    margin-right: 10px; /* Add space between done button and task text */
+}
+
+.done {
+    text-decoration: line-through;
+    color: #999;
 }

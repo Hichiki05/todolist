@@ -1,90 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Slider functionality for the main slider
-    const slides = document.querySelectorAll('.slider .slides img');
-    let currentIndex = 0;
+let slideIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
+function showSlides() {
+    let slides = document.querySelectorAll('.slides img');
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
     }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
     }
+    slides[slideIndex - 1].style.opacity = 1;
+}
 
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    }
+setInterval(showSlides, 3000); // Adjust time interval for quicker transitions
 
-    // Automatically change slides every 5 seconds
-    setInterval(nextSlide, 5000);
-
-    // Slider functionality for the About section slider
-    const aboutSlides = document.querySelectorAll('.about-slider .slides img');
-    let aboutIndex = 0;
-
-    function showAboutSlide(index) {
-        aboutSlides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
-    }
-
-    function nextAboutSlide() {
-        aboutIndex = (aboutIndex + 1) % aboutSlides.length;
-        showAboutSlide(aboutIndex);
-    }
-
-    function prevAboutSlide() {
-        aboutIndex = (aboutIndex - 1 + aboutSlides.length) % aboutSlides.length;
-        showAboutSlide(aboutIndex);
-    }
-
-    // Automatically change slides every 5 seconds for About section
-    setInterval(nextAboutSlide, 5000);
-
-    // To-Do List functionality
-    const taskInput = document.getElementById('task-input');
+// Adding task functionality
+function addTask() {
+    const input = document.getElementById('task-input');
+    const taskText = input.value.trim();
+    if (taskText === '') return;
+    
     const taskList = document.getElementById('task-list');
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <span>${taskText}</span>
+        <button class="complete-btn">✔</button>
+        <button class="delete-btn">✘</button>
+    `;
+    taskList.appendChild(li);
 
-    function addTask() {
-        const taskText = taskInput.value.trim();
-        if (taskText === '') return;
+    input.value = ''; // Clear input field
+}
 
-        const li = document.createElement('li');
-        li.classList.add('task-item');
-        li.innerHTML = `
-            ${taskText}
-            <button class="complete-btn">Done</button>
-            <button class="delete-btn">Delete</button>
-        `;
-
-        const deleteBtn = li.querySelector('.delete-btn');
-        const completeBtn = li.querySelector('.complete-btn');
-
-        deleteBtn.addEventListener('click', function() {
-            taskList.removeChild(li);
-        });
-
-        completeBtn.addEventListener('click', function() {
-            li.classList.toggle('completed');
-        });
-
-        // Add a unique background color to each task
-        const colors = ['#eaf4f4', '#f4eaf4', '#eaf4f4', '#f4eaf4'];
-        li.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-        taskList.appendChild(li);
-        taskInput.value = '';
+// Mark task as done or delete
+document.getElementById('task-list').addEventListener('click', function(e) {
+    if (e.target.classList.contains('delete-btn')) {
+        e.target.parentElement.remove();
+    } else if (e.target.classList.contains('complete-btn')) {
+        const task = e.target.parentElement.querySelector('span');
+        task.style.textDecoration = 'line-through';
+        e.target.style.display = 'none'; // Hide Done button after completion
     }
-
-    document.querySelector('button[onclick="addTask()"]').addEventListener('click', addTask);
-
-    taskInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            addTask();
-        }
-    });
 });

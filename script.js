@@ -1,28 +1,31 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Function to handle the slider for both sections
-    function initSlider(sliderSelector) {
-        const slider = document.querySelector(sliderSelector);
-        const slides = slider.querySelectorAll(".slides img");
-        let currentSlide = 0;
-        const totalSlides = slides.length;
+function addTask() {
+    const taskInput = document.getElementById('task-input');
+    const taskText = taskInput.value.trim();
+    
+    if (taskText !== "") {
+        const taskList = document.getElementById('task-list');
+        
+        const listItem = document.createElement('li');
+        listItem.textContent = taskText;
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.opacity = i === index ? 1 : 0;
-            });
-        }
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('delete-btn');
+        deleteButton.onclick = function() {
+            taskList.removeChild(listItem);
+        };
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
+        listItem.appendChild(deleteButton);
+        taskList.appendChild(listItem);
 
-        // Initialize the slider
-        showSlide(currentSlide);
-        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+        taskInput.value = "";
     }
+}
 
-    // Initialize sliders
-    initSlider("#intro .slider");
-    initSlider("#about .slider");
+// Optional: Add event listener to call addTask function when pressing Enter key
+document.getElementById('task-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent the default action of the Enter key (form submission)
+        addTask();
+    }
 });
